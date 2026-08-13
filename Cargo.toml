@@ -1,0 +1,17 @@
+[workspace]
+members = ["dev-automation-derive"]
+
+[package]
+name = "iced-dev-automation"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT OR Apache-2.0"
+description = "Debug-only Unix socket automation and screenshots for Iced applications"
+
+[dependencies]
+iced = { version = "0.14", default-features = false, features = ["tiny-skia", "tokio", "x11", "wayland"] }
+png = "0.17"
+serde = "1"
+serde_json = "1"
+dev-automation-derive = { path = "dev-automation-derive" }
