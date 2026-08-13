@@ -6,7 +6,7 @@ name = "iced-dev-automation"
 version = "0.1.0"
 edition = "2024"
 publish = false
-license = "MIT OR Apache-2.0"
+license = "MIT"
 description = "Debug-only Unix socket automation and screenshots for Iced applications"
 
 [dependencies]

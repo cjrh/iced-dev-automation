@@ -7,11 +7,18 @@ It provides two private Unix sockets:
 - **Screenshot**: returns the Iced-rendered viewport as PNG.
 - **Automation**: dispatches selected application message variants.
 
-This is for local development and coding-agent workflows. It does not inject OS
-mouse or keyboard events. It works independently of X11, Wayland, and the
+This is for local development and coding-agent workflows. 
+
+Your coding agent can grab an image of the app window, or interact
+with the app by sending JSON messages to the automation socket. The agent can
+then inspect the resulting screenshot to verify the UI state.
+
+We do not inject OS mouse or keyboard events. It works independently of X11, Wayland, and the
 window manager.
 
 ## Security model
+
+This is only for use during development!
 
 - Compile the integration only with `#[cfg(debug_assertions)]`.
 - Start sockets only when their CLI paths are supplied.
